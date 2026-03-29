@@ -227,14 +227,14 @@ const twitterBtn = document.getElementById('twitterLink');
 if(githubBtn) {
     githubBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        window.open('https://github.com/rishichowdary', '_blank');
+        window.open('https://github.com/rishi-chowdary', '_blank');
     });
 }
 
 if(linkedinBtn) {
     linkedinBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        window.open('https://linkedin.com/in/rishi-chowdary', '_blank');
+        window.open('https://www.linkedin.com/in/rishi-chowdary2803/', '_blank');
     });
 }
 
