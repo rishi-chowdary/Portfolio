@@ -1,228 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pusuluri Rishi Chowdary | Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-
-  <style>
-    :root {
-      --primary-color: #000000;
-      --background-color: #ffffff;
-      --accent-color: #dc3545;
-      --text-color: #000000;
-      --hover-bg: #000000;
-      --hover-text: #ffffff;
-    } 
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: var(--background-color);
-      color: var(--text-color);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px 20px 30px;
-      border-bottom: 1px solid var(--accent-color);
-    }
-
-    nav {
-      background-color: var(--primary-color);
-      text-align: center;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: var(--background-color);
-      text-decoration: none;
-      margin: 0 15px;
-      font-size: 16px;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: var(--accent-color);
-    }
-
-    .profile-img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 4px solid var(--primary-color);
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: var(--accent-color);
-      font-size: 18px;
-      margin-top: 5px;
-    }
-
-    .location {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #000000;
-    }
-
-    .section {
-      padding: 40px 0;
-      border-bottom: 1px solid #000000;
-    }
-
-    .section:last-child {
-      border-bottom: none;
-    }
-
-    .section h2 {
-      font-size: 28px;
-      color: var(--accent-color);
-      margin-bottom: 20px;
-      border-left: 5px solid var(--accent-color);
-      padding-left: 15px;
-    }
-
-    .skills span {
-      display: inline-block;
-      background-color: var(--text-color);
-      color: var(--background-color);
-      padding: 8px 16px;
-      border-radius: 20px;
-      margin: 6px;
-      font-size: 15px;
-    }
-
-    .contact-buttons a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 25px;
-      border: 2px solid var(--text-color);
-      border-radius: 30px;
-      color: var(--text-color);
-      text-decoration: none;
-      font-size: 16px;
-      transition: background 0.3s, color 0.3s;
-    }
-
-    .contact-buttons a:hover {
-      background-color: var(--hover-bg);
-      color: var(--hover-text);
-    }
-
-    .projects ul {
-      list-style-type: square;
-      padding-left: 20px;
-    }
-
-    .projects li {
-      margin-bottom: 12px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-      border-top: 1px solid #ccc;
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 28px;
-      }
-
-      .section h2 {
-        font-size: 22px;
-      }
-
-      nav a {
-        display: block;
-        margin: 8px 0;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Pusuluri Rishi Chowdary | AI Developer</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>
-    <img src="rishi.png" alt="Pusuluri Rishi Chowdary" class="profile-img" />
-    <h1>Pusuluri Rishi Chowdary</h1>
-    <p class="subtitle">B.Tech (3rd Year), Maharishi University of Information Technology, Noida</p>
-    <p class="subtitle">Aspiring Software Developer | Passionate about Technology</p>
-    <p class="location"><i class="fas fa-map-marker-alt"></i> Noida, India</p>
-    <div class="contact-buttons">
-      <a href="https://wa.me/918688347356" title="WhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      <a href="mailto:rishi2006h@gmail.com" title="Email"><i class="fas fa-envelope"></i> Email</a>
-      <a href="https://www.linkedin.com/in/rishi-chowdary2803" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+
+<div class="preloader" id="preloader">
+    <div class="loader-text">⚡ PUSULURI RISHI CHOWDARY ⚡<br><span style="font-size:1rem;">Loading AI Universe...</span></div>
+</div>
+<div class="progress-bar" id="progressBar"></div>
+<div class="cursor" id="cursor"></div>
+
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="logo">PRC<span style="color:#00f0ff;">.AI</span></div>
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">🌞 Light</button>
     </div>
-  </header>
+</nav>
 
-  
-  <nav>
-    <a href="#skills">Skills</a>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<canvas id="particles-canvas"></canvas>
 
-  <div class="container">
-    
-    <section class="section" id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>JAVA</span><span>C</span><span>C++</span><span>PYTHON</span><span>HTML5</span>
-        <span>CSS3</span><span>JAVA SCRIPT</span><span>REACT.JS</span><span>SQL</span><span>ARTIFICIAL INTELLIGENCE</span><span>MACHINE LEARNING</span><span>EDA</span><span>TABLEAU</span><span>POWER BI</span><span>LOOKER'S STUDIO</span><span>POSTMAN API</span>
-      </div>
-    </section>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-content">
+        <span style="font-size:1.2rem; color:#00f0ff;">👋 Hello, I'm</span>
+        <h1>Pusuluri Rishi Chowdary</h1>
+        <div class="typing-text" id="typingAnimation"></div>
+        <p style="max-width:500px; margin:20px auto 20px 0;">Building intelligent systems with bleeding-edge AI, LLMs, and automation. Let's shape the future.</p>
+        <div>
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+    </div>
+    <div class="hero-image">
+        <div class="profile-image-container">
+            <div class="profile-image-glow"></div>
+            <img src="Rishi.png" alt="Pusuluri Rishi Chowdary" class="profile-image" id="profileImage">
+            <div class="ai-badge">AI Developer</div>
+        </div>
+    </div>
+</section>
 
-    
-    <section class="section" id="about">
-      <h2>About Me</h2>
-      <p>I am a third-year B.Tech student at Maharishi University of Information Technology, Noida, driven by curiosity and a passion for solving real-world problems using technology. I have hands-on experience with several programming languages and tools, and I'm always eager to learn more and grow as a developer.</p>
-    </section>
+<!-- About -->
+<section id="about">
+    <div class="glass-card" style="padding:2rem;">
+        <h2 style="font-size:clamp(1.5rem, 5vw, 2rem); margin-bottom:1rem;"><span style="background:linear-gradient(135deg,#00f0ff,#aa00ff); -webkit-background-clip:text; background-clip:text; color:transparent;">About Me</span></h2>
+        <p style="font-size:1rem;">I'm an AI Developer passionate about bridging human interaction and machine intelligence. Experienced in LLM fine-tuning, RAG pipelines, and full-stack AI integration. I thrive on building scalable AI solutions that automate workflows, analyze data, and create immersive experiences. Currently exploring multi-modal agents and edge AI deployment.</p>
+        <div style="margin-top:30px; display:flex; gap:20px; flex-wrap:wrap;">
+            <div><span style="color:#00f0ff;">🎓</span> B.Tech AI & ML</div>
+            <div><span style="color:#00f0ff;">⚡</span> 4+ AI projects deployed</div>
+            <div><span style="color:#00f0ff;">🌍</span> Open Source Contributor</div>
+        </div>
+    </div>
+</section>
 
-    
-    <section class="section" id="projects">
-      <h2>Projects</h2>
-      <ul class="projects">
-        <li><strong>Portfolio Website</strong> - Designed and developed a responsive personal portfolio using HTML, CSS, and JavaScript.</li>
-        <li><strong>Student Result System</strong> - Created a Java-based desktop application for managing student records and results.</li>
-        <li><strong>API Testing Suite</strong> - Used Postman to automate and test RESTful APIs for a sample web service.</li>
-        <li><strong>Hospital Management System</strong> - Developed using C and SQL to manage patient data, billing, and doctor scheduling in a hospital setup.</li>
-      </ul>
-    </section>
+<!-- Skills with animated bars -->
+<section id="skills">
+    <h2 class="glow-text" style="font-size:clamp(1.8rem, 5vw, 2.5rem); text-align:center;">Technical Arsenal</h2>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; margin-top:3rem;">
+        <div class="glass-card">
+            <h3>💻 Languages & Frameworks</h3>
+            <div class="skill-item"><div class="skill-name"><span>Python</span><span>95%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="95"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>Java</span><span>80%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="80"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>C</span><span>75%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="75"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>JavaScript</span><span>88%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="88"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>HTML/CSS</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>Node.js</span><span>78%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="78"></div></div></div>
+        </div>
+        <div class="glass-card">
+            <h3>🤖 AI & Data Science</h3>
+            <div class="skill-item"><div class="skill-name"><span>Machine Learning</span><span>90%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="90"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>LLMs (Gemini, GPT)</span><span>92%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="92"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>Data Analysis</span><span>85%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="85"></div></div></div>
+            <div class="skill-item"><div class="skill-name"><span>RAG / Vector DB</span><span>82%</span></div><div class="skill-bar-bg"><div class="skill-bar-fill" data-width="82"></div></div></div>
+        </div>
+    </div>
+</section>
 
-    
-    <section class="section" id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:rishi2006h@gmail.com" style="color:black;">rishi2006h@gmail.com</a></p>
-      <p>WhatsApp: <a href="https://wa.me/918688347356" style="color:black;">+91 8688347356</a></p>
-    </section>
-  </div>
+<!-- Experience Timeline -->
+<section id="experience">
+    <h2 style="font-size:clamp(1.8rem, 5vw, 2.5rem); text-align:center;">Professional Journey</h2>
+    <div class="timeline" style="margin-top: 3rem;">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3>AI Intern @ SunBuzz Media <span style="color:#00f0ff;">(2026 – Present)</span></h3>
+            <ul style="margin-left: 20px;"><li>Developed AI-driven content recommendation engine boosting engagement by 34%</li><li>Integrated LLM APIs for automated summarization and social media insights</li><li>Fine-tuned Gemini model for brand-specific chatbot</li></ul>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3>Data Visualization Intern @ Excelerate <span style="color:#00f0ff;">(2025)</span></h3>
+            <ul style="margin-left: 20px;"><li>Created interactive dashboards using Python & Tableau for business metrics</li><li>Automated ETL pipelines reducing reporting time by 40%</li><li>Collaborated on data storytelling for C-level presentations</li></ul>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <h3>Data Outreach Intern @ Excelerate <span style="color:#00f0ff;">(2025)</span></h3>
+            <ul style="margin-left: 20px;"><li>Executed data-driven outreach strategies to identify and engage potential business leads</li><li>Analyzed datasets to extract actionable insights for targeted communication and campaign optimization</li><li>Assisted in creating reports and dashboards to track outreach performance and engagement metrics</li></ul>
+        </div>
+    </div>
+</section>
 
-  <footer>
-    &copy; 2025 Pusuluri Rishi Chowdary | All Rights Reserved
-  </footer>
+<!-- Projects -->
+<section id="projects">
+    <h2 style="font-size:clamp(1.8rem, 5vw, 2.5rem); text-align:center;">🚀 Featured Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card"><h3>AI Chatbot (Gemini LLM)</h3><p>Conversational agent powered by Google Gemini, context memory, multi-turn reasoning.</p><div class="project-tech"><span class="tech-badge">Python</span><span class="tech-badge">Gemini API</span><span class="tech-badge">FastAPI</span></div></div>
+        <div class="project-card"><h3>AI Receptionist</h3><p>Voice-enabled virtual receptionist for appointment scheduling & FAQs with speech-to-text.</p><div class="project-tech"><span class="tech-badge">Whisper</span><span class="tech-badge">ElevenLabs</span><span class="tech-badge">React</span></div></div>
+        <div class="project-card"><h3>Email Automation System</h3><p>AI agent that drafts, categorizes and auto-responds to emails using NLP.</p><div class="project-tech"><span class="tech-badge">Node.js</span><span class="tech-badge">OpenAI</span><span class="tech-badge">Nodemailer</span></div></div>
+        <div class="project-card"><h3>AI Calling Bot</h3><p>Outbound calling bot for lead verification using Twilio + AI voice synthesis.</p><div class="project-tech"><span class="tech-badge">Twilio</span><span class="tech-badge">Deepgram</span><span class="tech-badge">Python</span></div></div>
+        <div class="project-card"><h3>Portfolio Website</h3><p>This immersive glassmorphism portfolio with AI animations and interactions.</p><div class="project-tech"><span class="tech-badge">HTML/CSS/JS</span><span class="tech-badge">Canvas API</span></div></div>
+        <div class="project-card"><h3>SunBuzz Media Website</h3><p>Full-stack media portal with real-time content analytics and AI insights.</p><div class="project-tech"><span class="tech-badge">Next.js</span><span class="tech-badge">MongoDB</span><span class="tech-badge">AI</span></div></div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem;">
+        <div class="glass-card">
+            <h3>📬 Get in touch</h3>
+            <p>✉️ <a href="mailto:rishi2006h@gmail.com" class="contact-link" id="emailLink">rishi2006h@gmail.com</a></p>
+            <p>📞 <a href="tel:+918688347356" class="contact-link" id="phoneLink">+91 8688347356</a></p>
+            <p>📍 Noida, Uttar Pradesh</p>
+            <div class="social-icons">
+                <a href="#" id="githubLink" class="social-icon" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.387.6.113.82-.26.82-.58 0-.287-.01-1.05-.015-2.06-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.123-.3-.535-1.52.117-3.16 0 0 1.008-.322 3.3 1.23.96-.267 1.98-.4 3-.405 1.02.005 2.04.138 3 .405 2.29-1.552 3.297-1.23 3.297-1.23.653 1.64.24 2.86.118 3.16.768.84 1.233 1.91 1.233 3.22 0 4.61-2.804 5.62-5.476 5.92.43.37.824 1.102.824 2.22 0 1.602-.015 2.894-.015 3.287 0 .322.216.698.83.578C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                    GitHub
+                </a>
+                <a href="#" id="linkedinLink" class="social-icon" target="_blank">
+                    <svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451c.979 0 1.771-.773 1.771-1.729V1.729C24 .774 23.222 0 22.225 0z"/>
+                    </svg>
+                    LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="glass-card">
+            <form id="contactForm" class="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLScg5HLVD1vwIeBzOQx-YIgNZyOewe7XipnoeRyllz4cZA4_aA/formResponse" method="POST" target="hidden_iframe">
+                <input type="text" name="entry.2060771699" placeholder="Your Name" id="name" required>
+                <input type="email" name="entry.267346740" placeholder="Email Address" id="email" required>
+                <textarea rows="4" name="entry.1904214321" placeholder="Message" id="message" required></textarea>
+                <button type="submit" class="btn btn-primary" style="width:100%">Send Message ✨</button>
+                <div id="formStatus" style="margin-top:10px;"></div>
+            </form>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+        </div>
+    </div>
+</section>
+
+<footer>© 2024 Pusuluri Rishi Chowdary | AI Developer</footer>
+<div class="back-to-top" id="backToTop">↑</div>
+
+<script src="script.js"></script>
 </body>
 </html>
