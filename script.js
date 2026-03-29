@@ -234,16 +234,10 @@ if(githubBtn) {
 if(linkedinBtn) {
     linkedinBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        window.open('https://www.linkedin.com/in/rishi-chowdary2803/', '_blank');
+        window.open('https://www.linkedin.com/in/rishi-chowdary2803', '_blank');
     });
 }
 
-if(twitterBtn) {
-    twitterBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        window.open('https://twitter.com/rishi_chowdary', '_blank');
-    });
-}
 
 // Parallax effect on hero
 window.addEventListener('scroll', () => {
